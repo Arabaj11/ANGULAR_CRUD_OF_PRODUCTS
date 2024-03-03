@@ -1,0 +1,25 @@
+
+<div class="row mb-5 ">
+    <div class="col-lg-6 mx-auto mt-5">
+        <table class="table border ">
+           
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">name</th>
+                <th scope="col">price</th>
+                <th scope="col">Action</th>
+              </tr>
+           
+              <tr *ngFor="let product of products ; let i= index">
+                <td>{{i+1}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td><span ><a class="btn btn-success btn-sm" routerLink="/product/{{product.id}}">Update</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                  <a (click)="deleteData(product.id)" class="btn btn-danger btn-sm">Delete </a></span></td>
+                
+
+              </tr>
+           
+          </table>
+    </div>
+</div>
